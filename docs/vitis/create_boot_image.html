@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>How to create a Bare Metal Boot Image in AMD (Xilinx) Vitis Unified IDE</title>
+<link rel="stylesheet" type="text/css" href="../main.css">
+<link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="../mobile.css">
+<link rel="stylesheet" type="text/css" media="(orientation: landscape)" href="../pc.css">
+</head>
+<body>
+<div id="title">How to create a Bare Metal Boot Image in AMD (Xilinx) Vitis Unified IDE</div>
+<div id="topmenu"></div>
+<div class="margin">
+
+<p>When you create <a href="vitis_template.html">a stand alone (bare metal) application</a> in Vitis Unified IDE, you can configure and run SoC FPGAs such as KV260 and KR260 directly from the IDE via USB. However, if you create a Boot Image (BOOT.bin), you can write the application to the board's flash memory and immediately run it on the board itself. (No SD card is required.)</p>
+
+<h3>Boot Image Creation</h3>
+
+<p>Open the project's Workspace in the Vitis Unified IDE and click on "Vitis Components: Flow: Application Component: Create Boot Image".</p>
+
+<a href="img/boot_image02.png"><img src="img/boot_image02.png" class="auto" width="75%"></a><br>
+
+<p>Click "Boot Image Options: Output BIF File Path: Browse" and select the directory where you want to save the Boot Image.</p>
+
+<a href="img/boot_image03.png"><img src="img/boot_image03.png" class="auto" width="75%"></a><br>
+
+<p>Click "Create Image" to create the Boot Image.</p>
+
+<a href="img/boot_image04.png"><img src="img/boot_image04.png" class="auto" width="75%"></a><br>
+
+<p>Write the created Boot Image (BOOT.bin) to the board's flash memory with the <a href="boot_image_recovery.html">"Boot Image Recovery Tool"</a>. If this Boot Image is set to priority boot with "Requested Boot Image", it will be automatically executed at power-on.</p>
+
+
+<br>
+</div><!-- .margin -->
+<div id="footer">Copyright &copy;2025 miya, All rights reserved.</div>
+</body>
+</html>

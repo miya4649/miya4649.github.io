@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>About The Boot Image Recovery Tool for the Kria KV260 and KR260</title>
+<link rel="stylesheet" type="text/css" href="../main.css">
+<link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="../mobile.css">
+<link rel="stylesheet" type="text/css" media="(orientation: landscape)" href="../pc.css">
+</head>
+<body>
+<div id="title">About The Boot Image Recovery Tool for the Kria KV260 and KR260</div>
+<div id="topmenu"></div>
+<div class="margin">
+
+
+<h2>The Boot Image Recovery Tool</h2>
+
+<p>In the event that the Kria KV260 or KR260 fails to rewrite the firmware and Linux will no longer boot, the board's built-in Boot Image Recovery Tool function can be used to write the firmware from a PC and recover it.</p>
+
+<p>It is also possible to create a boot image of your own application and immediately boot the board by itself.</p>
+
+<h3>How to use the Boot Image Recovery Tool</h3>
+
+<p>First, obtain the latest version of the firmware for the board and Linux from <a href="https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+SOMs+Starter+Kits#K26-Boot-Firmware-Updates">AMD's support site</a>.</p>
+
+<p>Set up a LAN environment of 192.168.0.0/24 and connect your PC and KV260 to the LAN.</p>
+
+<p>Turn on the power while holding down the "FWUEN" button on the board or press Reset to launch the Boot Image Recovery Tool web interface.</p>
+
+<p>Open http://192.168.0.111/ in your PC's web browser and you will see the following screen. (https is not supported)</p>
+
+<a href="img/boot_image01.png"><img src="img/boot_image01.png" class="auto" width="75%"></a><br>
+
+<p>"Boot Image Status" shows the current status of the Boot Image (firmware). There are two areas that can be written to, A and B. The image of the one set to "Non Bootable" will not be used. If both are set to Bootable, the one selected under "Requested Boot Image" will be used. If there is still a valid Boot Image on either A or B, this setting is sufficient for recovery.</p>
+
+<p>Under "Recover Image," you can "Browse" to select a Boot Image on your PC and "Upload" it to either the A or B area.</p>
+
+<p>This can be not only firmware downloaded from AMD's support site, but also your own Boot Image (e.g. standalone application) created with Vitis. If you write a standalone application and set it as the priority boot, it is possible to immediately start the original application on the board itself.</p>
+
+<p>For example, you can write normal Linux boot firmware to A and your original application to B, and use this tool to switch between the two.</p>
+
+<p>The Boot Image Recovery Tool itself is written in a different area on the flash memory from the A/B Boot Image, so even if an invalid Boot Image is written to both A and B, recovery is usually possible. (This is not guaranteed, so try at your own risk.)</p>
+
+
+<br>
+</div><!-- .margin -->
+<div id="footer">Copyright &copy;2025 miya, All rights reserved.</div>
+</body>
+</html>

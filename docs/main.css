@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* (C) miya. All rights reserved. */
+
+body {
+margin: 0;
+padding: 0;
+font-size: 1rem;
+}
+
+canvas {
+vertical-align: bottom;
+}
+
+a:hover {
+color: #ff00cc;
+}
+
+hr {
+height: 2px;
+border: 0 solid #999999;
+border-bottom-width: 1px;
+}
+
+li {
+margin-bottom: 0.5rem;
+}
+
+span.comment {
+font-size: 0.8rem;
+color: #007f00;
+}
+
+span.c1 {
+color: #336699;
+}
+
+span.notes {
+font-weight: bold;
+color: #cc6600;
+}
+
+h2 {
+font-size: 1.5rem;
+color: #669900;
+border-bottom: 1px solid #999999;
+}
+
+h3 {
+font-size: 1.33rem;
+color: #6699cc;
+border-bottom: 1px solid #999999;
+}
+
+h4 {
+font-size: 1.17rem;
+color: #6699cc;
+border-left: 0.5rem solid #009966;
+padding-left: 0.42rem;
+}
+
+h5 {
+font-size: 1.17rem;
+color: #6699cc;
+border-left: 0.375rem solid #336699;
+padding-left: 0.42rem;
+margin-top: 1.17rem;
+margin-bottom: 1.17rem;
+}
+
+h6 {
+font-size: 1rem;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+div.container {
+position: relative;
+top: 0;
+left: 0;
+}
+
+div#title {
+margin: 0;
+padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+color: #ffffff;
+background-color: #7f7f7f;
+font-size: 1.75rem;
+}
+
+div#topmenu {
+margin: 0;
+padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+color: #ffffff;
+background-color: #cccccc;
+}
+
+div#topmenu a:link {
+color: #ffffff;
+text-decoration: none;
+}
+
+div#topmenu a:visited {
+color: #ffffff;
+text-decoration: none;
+}
+
+div#topmenu a:active {
+color: #000000;
+background-color: #ffffff;
+text-decoration: underline;
+}
+
+div#topmenu a:hover {
+color: #ffffff;
+text-decoration: underline;
+}
+
+div#footer {
+position: relative;
+margin: 0;
+padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+color: #ffffff;
+background-color: #7f7f7f;
+text-align: center;
+}
+
+div#side p {
+margin: 0 0 0.5rem 0;
+padding: 0;
+}
+
+div#main p {
+margin: 0 0 0.5rem 0;
+padding: 0;
+}
+
+p.title {
+border-top: 1px solid #999999;
+border-bottom: 1px solid #cccccc;
+text-align: center;
+}
+
+p.cmd {
+font-weight: bold;
+color: #007f00;
+}
+
+div.code {
+margin: 0.5rem 0 0.5rem 0;
+padding: 1rem 1rem 1rem 1rem;
+border: 1px solid #999999;
+color: #006600;
+font-family: monospace;
+overflow: auto;
+}
+
+div.box {
+margin: 0.5rem 0 0.5rem 0;
+padding: 1rem 1rem 1rem 1rem;
+border: 1px solid #999999;
+}
+
+div.mono {
+font-family: monospace;
+}
+
+div.scrollbox {
+overflow: auto;
+}
+
+table.table1 {
+border: 1px solid #999999;
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+table.table1 th {
+padding: 0.5rem;
+border: 1px solid #999999;
+background: #ccccff;
+font-weight: bold;
+text-align: center;
+}
+
+table.table1 td {
+padding: 0.5rem;
+border: 1px solid #999999;
+text-align: left;
+vertical-align: top;
+}
+
+table.table1 td.center {
+padding: 0.5rem;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: top;
+}

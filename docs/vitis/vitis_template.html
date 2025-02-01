@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Vitis Unified IDE Stand alone (Bare metal) template project for AMD (Xilinx) Kria KV260 and KR260</title>
+<link rel="stylesheet" type="text/css" href="../main.css">
+<link rel="stylesheet" type="text/css" media="(orientation: portrait)" href="../mobile.css">
+<link rel="stylesheet" type="text/css" media="(orientation: landscape)" href="../pc.css">
+</head>
+<body>
+<div id="title">Vitis Unified IDE Stand alone (Bare metal) template project for AMD (Xilinx) Kria KV260 and KR260</div>
+<div id="topmenu"></div>
+<div class="margin">
+
+<p>This is a script that generates a template project for starting development on AMD (Xilinx) Kria KV260, KR260. It sets up a minimal configuration for each board and implements LED blink (rtl_top.v) as an example.</p>
+
+<p>Development can be started by simply coding the HDL with rtl_top.v as the top module.</p>
+
+<p>The FPGA can be configured and run directly from a host PC via USB without the need for Linux or FSBL configuration since it is configured in Vitis' stand alone (bare metal) application format.</p>
+
+<p>Use Vivado / Vitis Ver. 2023.2 or later for Vitis Unified IDE.</p>
+
+<h3>Template project for AMD Kria KV260, KR260 (LED blink)</h3>
+
+
+<p>Download: <a href="https://github.com/miya4649/Vitis_KV260_KR260_Template">Vitis_KV260_KR260_Template</a> (License: Public Domain)</p>
+
+<p>This is a project to blink the LED connected to the board.</p>
+
+<p>Connect the LED and a 330Ω resistor to PMOD J2 on the board as shown below.</p>
+
+<a href="img/kv260_led.png"><img src="img/kv260_led.png" class="auto"></a><br>
+
+<p>Extract the above file (vitis_template.tar.gz). By default, the project is configured for KV260; for KR260, replace “set board_type kv260” in vivado.tcl with “set board_type kr260”.</p>
+
+<h4>How to execute the script in a terminal on a Linux (e.g. Ubuntu) PC</h4>
+
+<p>If you have Vivado / Vitis installed on a Linux (e.g. Ubuntu) environment on your PC, you can create and synthesize the project with just the "make" command.</p>
+
+<p>In a Linux terminal,</p>
+
+<p>$ source Vitis installation path/settings64.sh<br>(e.g. $ source /opt/Xilinx/Vitis/2024.2/settings64.sh )</p>
+
+<p>$ cd [THE PATH OF THIS DIRECTORY]</p>
+
+<p>$ make</p>
+
+<p>Or you can do each step separately as follows.</p>
+
+<p>$ make vivado<br>(create Vivado project)</p>
+
+<p>$ make vivado-run<br>(Synthesis, Implement, Export HW)</p>
+
+<p>$ make vitis<br>(create and build Vitis Unified IDE project)</p>
+
+<h4>How to run the application</h4>
+
+<p>Start Vitis Unified IDE,</p>
+
+<p>select [THIS DIRECTORY]/vitis_workspace in "File: Set Workspace" and click "OK",</p>
+
+<p>select "View: Flow",</p>
+
+<p>select Project_1_app in "FLOW: Component",</p>
+
+<p>then click "FLOW: Run".</p>
+
+<h4>How to execute the script in Vivado, Vitis IDE</h4>
+
+<p>In Vivado, open the "menu: Window: Tcl Console".</p>
+
+<a href="img/tcl_console.png"><img src="img/tcl_console.png" class="auto" width="75%"></a><br>
+
+<p>In Tcl Console,</p>
+
+<p>pwd<br>(confirm current directory)</p>
+
+<p>cd [THE PATH OF EXTRACTED FILE] (Vitis_KV260_KR260_Template)<br>(go to directory where vivado.tcl is)</p>
+
+<p>source vivado.tcl<br>(run script to create project)</p>
+
+<p>Wait a few moments and the project will be created.</p>
+
+<p>source vivado-run.tcl<br>(Run the Synthesis, Implement, Export Hardware script)</p>
+
+<p>The project will be exported to "project_1/design_1_wrapper.xsa".</p>
+
+<p>In the Vitis Unified IDE, open the menu: Terminal: New Terminal.</p>
+
+<a href="img/vitis_terminal.png"><img src="img/vitis_terminal.png" class="auto" width="75%"></a><br>
+
+<p>In Terminal,</p>
+
+<p>pwd<br>(confirm current directory)</p>
+
+<p>cd [THE PATH OF EXTRACTED FILE] (Vitis_KV260_KR260_Template)<br>(go to directory where vitisnew.py is)</p>
+
+<p>vitis -s vitisnew.py<br> (Execute the Vitis project generate script. Build is also executed automatically)</p>
+
+<p>Click "File: Set Workspace", select "vitis_template/vitis_workspace",</p>
+
+<p>Select View: FLOW,</p>
+
+<p>Select "project_1_app" from "FLOW: Component",</p>
+
+<p>then Click "FLOW: Run".</p>
+
+<h4>Supplemental Information</h4>
+
+<h3>About updating submodules of RTL</h3>
+
+<p>When only the source code of a submodule of rtl_top.v is modified, the update information may not be retrieved properly on Vivado. In this case, if you modify rtl_top.v by adding comments or other dummy modifications, Vivado will catch it and display "Refresh Changed Modules", which you can click to reload and reset the source tree.<br>Example: // rev. 1 (2, 3, ...)</p>
+
+
+<br>
+</div><!-- .margin -->
+<div id="footer">Copyright &copy;2025 miya, All rights reserved.</div>
+</body>
+</html>

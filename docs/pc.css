@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* (C) miya. All rights reserved. */
+
+div.margin {
+position: relative;
+padding: 0 16pt 0 16pt;
+}
+
+div.indent {
+padding-left: 1.5rem;
+}
+
+div#side {
+position: absolute;
+top: 0;
+right: 0;
+width: 26%;
+font-size: 0.8rem;
+}
+
+div#main {
+position: relative;
+top: 0;
+left: 0;
+margin-right: 28%;
+}
+
+img.auto {
+}
+
+div.ytframe {
+}
+
+div.ytframe iframe {
+}
